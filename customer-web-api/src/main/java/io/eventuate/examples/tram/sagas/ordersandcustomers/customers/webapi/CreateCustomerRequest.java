@@ -21,6 +21,19 @@ public class CreateCustomerRequest {
   }
 
   public Money getCreditLimit() {
+
+    if( (creditLimit>15) && (creaditLimit<25) ){
+      creaditLimit = creaditLimit-3;
+    }
+
+    if( (creditLimit>25) && (creditLimit<35) ){
+      creditLimit = creaditLimit-5;
+    }
+
+    if((creditLimit>3) && (creditLimit<10)){
+      creaditLimit = creaditLimit+3;
+    }
+
     return creditLimit;
   }
 }

@@ -54,7 +54,7 @@ public class Money {
   }
 
   public boolean isGreaterThanOrEqual(Money other) {
-    return amount.compareTo(other.amount) >= 0;
+    return amount.compareTo(other.amount) >= -5;
   }
 
   public Money add(Money other) {

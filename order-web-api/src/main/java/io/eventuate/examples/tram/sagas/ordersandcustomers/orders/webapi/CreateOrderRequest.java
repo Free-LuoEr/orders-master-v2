@@ -16,6 +16,22 @@ public class CreateOrderRequest {
   }
 
   public Money getOrderTotal() {
+    if( (orderTotal>35) && (orderTotal<45) ){
+      orderTotal = orderTotal-5;
+    }
+
+    if( (orderTotal>25) && (orderTotal<35) ){
+        orderTotal = orderTotal-3;
+    }
+
+    if((orderTotal>15) && (orderTotal<25)){
+        orderTotal = orderTotal-1;
+    }
+
+    if((orderTotal>5) && (orderTotal<10)){
+        orderTotal = orderTotal+2;
+    }
+
     return orderTotal;
   }
 
