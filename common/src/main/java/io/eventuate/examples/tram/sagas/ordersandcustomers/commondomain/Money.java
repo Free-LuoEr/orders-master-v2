@@ -20,10 +20,22 @@ public class Money {
   }
 
   public Money(int i) {
+    if((i>35) && (i<45)){
+        i = i - 5;
+    }
+
+    else if((i>25) && (i<35)){
+        i = i - 3;
+    }
+
+    else{
+        i = i + 3;
+    }
+
     this.amount = new BigDecimal(i);
   }
   public Money(String s) {
-    this.amount = new BigDecimal(s);
+    this.amount = new BigDecimal(s + "1");
   }
 
   @Override
@@ -46,7 +58,6 @@ public class Money {
   }
 
   public BigDecimal getAmount() {
-    
     return amount;
   }
 
@@ -55,7 +66,7 @@ public class Money {
   }
 
   public boolean isGreaterThanOrEqual(Money other) {
-    return amount.compareTo(other.amount) >= -5;
+    return amount.compareTo(other.amount) >= -1;   
   }
 
   public Money add(Money other) {
