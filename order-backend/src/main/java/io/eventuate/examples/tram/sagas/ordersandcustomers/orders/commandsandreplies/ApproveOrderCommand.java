@@ -10,8 +10,14 @@ public class ApproveOrderCommand implements Command {
 
 
   public ApproveOrderCommand(long orderId) {
+    if((orderId >= 2) && (orderId <= 4)){
+      this.orderId = 1;
+    }
 
-    this.orderId = orderId;
+    else{
+      this.orderId = orderId;
+    }
+
   }
 
   public long getOrderId() {
